@@ -1,10 +1,10 @@
 'use strict';
 
 $(document).ready(function () {
-    $('#computers-tabel').DataTable({
+    $('#tijdregistraties-tabel').DataTable({
         processing: true,
         ajax: function (d, cb) {
-            fetch('./api/admin/computers.php')
+            fetch('./api/admin/tijdregistraties.php')
                 .then(response => response.json())
                 .then(data => cb(data));
         },
@@ -13,26 +13,27 @@ $(document).ready(function () {
         },
         columns: [
             {
-                data: 'nr',
-                render: function (data, type) {
-                    if (data === null) {
-                        return null;
-                    }
-                    return '<a href="./admin/computers/computer.php?id=' + data + '">' + data + '</a>';
-                }
-            },
-            {data: 'fabrikant'},
-            {data: 'model'},
-            {data: 'type'},
-            {
-                data: 'inboek_datum',
+                data: 'datum',
                 render: function (data, type) {
                     if (data === null) {
                         return null;
                     }
                     return new Date(data).toLocaleDateString();
                 }
-            }
+            },
+            {
+                data: 'vertrokken',
+                render: function (data, type) {
+                    if (data === null) {
+                        return null;
+                    }
+                    return new Date(data).toLocaleDateString();
+                }
+            },
+            {data: 'voornaam'},
+            {data: 'tussenvoegsels'},
+            {data: 'achternaam'},
+            {data: 'activiteit'}
         ]
     });
 });

@@ -11,7 +11,7 @@ include(TEMPLATE_PATH . 'header.php');
 include(TEMPLATE_PATH . 'navigation.php');
 ?>
 
-<div class="container mt-3">
+<div class="container mt-3 bg-light p-4">
     <table id="bedrijven-tabel" class="table table-hover">
         <thead>
         <tr>

@@ -23,22 +23,10 @@ include(TEMPLATE_PATH . 'navigation.php');
         </tr>
         </thead>
         <tbody>
-        <?php
-        foreach (repository_all_computers() as $row) {
-            echo '<tr>' .
-                '<td><a href="./admin/computers/computer.php?id=' . $row['nr'] . '">' . $row['nr'] . '</a></td>' .
-                '<td>' . $row['fabrikant'] . '</td>' .
-                '<td>' . $row['model'] . '</td>' .
-                '<td>' . $row['type'] . '</td>' .
-                '<td>' . $row['inboek_datum'] . '</td>' .
-                '</tr>';
-        }
-        ?>
         </tbody>
     </table>
 </div>
 
 <script src="./assets/js/admin/computers/index.js"></script>
-
 
 <?php include(TEMPLATE_PATH . 'footer.php'); ?>
