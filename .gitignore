@@ -1,0 +1,16 @@
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Composer
+/vendor/
+
+# Test
+/.phpunit.result.cache
+
+# Configure file, see readme.md
+/libs/configure.php

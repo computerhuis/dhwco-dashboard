@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "RO Sans";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./fonts/RO-SansWebText-Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "RO Sans";
+    font-weight: normal;
+    font-style: italic;
+    src: url("./fonts/RO-SansWebText-Italic.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "RO Sans";
+    font-weight: bold;
+    font-style: normal;
+    src: url("./fonts/RO-SansWebText-Bold.woff2") format("woff2")
+}
+
+* {
+    font-family: "RO Sans", Calibri, sans-serif;
+}
+
+/* --[ https://www.rijkshuisstijl.nl/ ]------------------------------------------------------------------------------ */
+.form-select,
+.form-control,
+.form-check-input[type=checkbox] {
+    border-radius: 0;
+}
+
+/* --[ primary color ]-- */
+a,
+.link-primary,
+.btn-outline-primary,
+.btn-link,
+.form-check-input:checked,
+.page-link,
+.page-link.active {
+    color: #01689b;
+}
+
+.bg-primary,
+.btn-primary,
+.btn-outline-primary:hover,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.form-check-input:checked,
+.page-link.active,
+.dropdown-item.active,
+.active > .page-link, .page-link.active {
+    background-color: #01689b !important;
+}
+
+.btn-outline-primary {
+    border-color: #01689b;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+    border-color: #000000;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.active > .page-link {
+    color: #FFFFFF;
+}
+
+/* --[ success color ]-- */
+.btn-outline-success {
+    color: #39870c;
+    border-color: #39870c;
+}
