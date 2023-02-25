@@ -20,13 +20,13 @@ $computer = repository_computer($_GET["id"]);
         <div class="row mt-1">
             <label class="col-4 col-form-label" for="eigenaar">Eigenaar:</label>
             <div class="col-8">
-                <a href="<?php echo "./personen/persoon.php?id=" . $computer['persoon_nr']; ?>"><?php echo $computer['voornaam'] . " " . $computer['tussenvoegsels'] . " " . $computer['achternaam']; ?></a>
+                <a href="<?php echo "./admin/personen/persoon.php?id=" . $computer['persoon_nr']; ?>"><?php echo $computer['voornaam'] . " " . $computer['tussenvoegsels'] . " " . $computer['achternaam']; ?></a>
             </div>
         </div>
         <div class="row mt-1">
             <label class="col-4 col-form-label" for="gedoneerd">Gedoneerd door:</label>
             <div class="col-8">
-                <a href="<?php echo "./bedrijven/bedrijf.php?id=" . $computer['bedrijf_nr']; ?>"><?php echo $computer['bedrijfsnaam']; ?></a>
+                <a href="<?php echo "./admin/bedrijven/bedrijf.php?id=" . $computer['bedrijf_nr']; ?>"><?php echo $computer['bedrijfsnaam']; ?></a>
             </div>
         </div>
 

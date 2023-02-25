@@ -24,13 +24,15 @@
 }
 
 /* --[ https://www.rijkshuisstijl.nl/ ]------------------------------------------------------------------------------ */
+/* --[ square border ]----------------------------------------------------------------------------------------------- */
 .form-select,
 .form-control,
-.form-check-input[type=checkbox] {
+.form-check-input[type=checkbox],
+.btn {
     border-radius: 0;
 }
 
-/* --[ primary color ]-- */
+/* --[ primary color ]----------------------------------------------------------------------------------------------- */
 a,
 .link-primary,
 .btn-outline-primary,
@@ -68,7 +70,7 @@ a,
     color: #FFFFFF;
 }
 
-/* --[ success color ]-- */
+/* --[ success color ]----------------------------------------------------------------------------------------------- */
 .btn-outline-success {
     color: #39870c;
     border-color: #39870c;
