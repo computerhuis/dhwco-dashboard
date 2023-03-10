@@ -3,8 +3,6 @@
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'bootstrap.php');
 security_require_login('ADMIN');
 
-require_once(REPOSITORY_PATH . 'computers.php');
-
 $page_title = 'Computers';
 $navigation_menu = 'computers';
 include(TEMPLATE_PATH . 'header.php');

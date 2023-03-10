@@ -1,10 +1,10 @@
 'use strict';
 
 $(document).ready(function () {
-    $('#peronen-tabel').DataTable({
+    $('#activiteiten-tabel').DataTable({
         processing: true,
         ajax: function (d, cb) {
-            fetch('./api/admin/personen.php')
+            fetch('./api/admin/activiteiten.php')
                 .then(response => response.json())
                 .then(data => cb(data));
         },
@@ -12,37 +12,36 @@ $(document).ready(function () {
             url: './assets/js/datatable/nl-NL.json'
         },
         columns: [
+            {data: 'nr'},
+            {data: 'naam'},
             {
-                data: 'nr',
+                data: 'rapportage',
+                render: function (data, type) {
+                    if (data === null || data === false) {
+                        return '<i class="bi bi-square"></i>';
+                    }
+
+                    return '<i class="bi bi-check2-square"></i>';
+                }
+            },
+            {
+                data: 'actief_vanaf',
                 render: function (data, type) {
                     if (data === null) {
                         return null;
                     }
-                    return '<a href="./admin/personen/persoon.php?id' + data + '">' + data + '</a>';
+                    return new Date(data).toLocaleDateString();
                 }
             },
-            {data: 'voorletters'},
-            {data: 'tussenvoegsels'},
-            {data: 'achternaam'},
             {
-                data: 'email',
+                data: 'actief_tot',
                 render: function (data, type) {
                     if (data === null) {
                         return null;
                     }
-                    return '<a href="mailto:' + data + '">' + data + '</a>';
+                    return new Date(data).toLocaleDateString();
                 }
-            },
-            {
-                data: 'postcode',
-                render: function (data, type) {
-                    if (data === null) {
-                        return null;
-                    }
-                    return '<a target="_blank" href="https://postcodebijadres.nl/' + data + '">' + data + '</a>';
-                }
-            },
-            {data: 'inschrijf_datum'},
+            }
         ]
     });
 });
